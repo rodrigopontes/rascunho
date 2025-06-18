@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" >
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,12 +15,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
   <style>
-    /* === Reset e fontes === */
     body, html {
       margin: 0; padding: 0; box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #001F4D 0%, #FF1F1F 100%);
-      color: #fff;
+      background: #fff;
+      color: #222;
       min-height: 100vh;
       display: flex; flex-direction: column;
     }
@@ -55,13 +54,15 @@
       width: 100%;
     }
 
-    /* === Seção Capa com imagem destaque e texto flutuante === */
+    /* === Seção Capa === */
     .hero-section {
       position: relative;
       margin-bottom: 4rem;
       border-radius: 15px;
       overflow: hidden;
       box-shadow: 0 15px 40px rgba(255, 31, 31, 0.8);
+      background: #fff;
+      color: #222;
     }
     .hero-section img {
       width: 100%;
@@ -82,6 +83,7 @@
       max-width: 450px;
       z-index: 10;
       text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+      color: #222;
     }
     .hero-text h1 {
       font-size: 3rem;
@@ -130,7 +132,8 @@
       overflow: hidden;
       box-shadow: 0 10px 25px rgba(255, 31, 31, 0.6);
       cursor: pointer;
-      background: #001F4D;
+      background: #fff;
+      color: #222;
       transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
     .gallery-item:hover {
@@ -162,15 +165,15 @@
 
     /* === Seção Descrição e Benefícios === */
     .benefits-section {
-      background: #002366;
+      background: #fff;
+      color: #222;
       padding: 3rem 2rem;
       border-radius: 20px;
-      box-shadow: 0 15px 40px rgba(255, 31, 31, 0.7);
+      box-shadow: 0 15px 40px rgba(255, 31, 31, 0.15);
       margin-bottom: 5rem;
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
-      color: #fff;
     }
     .benefits-text {
       flex: 1 1 400px;
@@ -196,7 +199,7 @@
     }
     .benefit-item i {
       font-size: 1.6rem;
-      color: #fff;
+      color: #002366;
       text-shadow: 0 0 10px #FF1F1F;
     }
 
@@ -261,14 +264,14 @@
     /* === Incentivo com animação e botão === */
     .call-to-action {
       text-align: center;
-      background: #FF1F1F;
-      color: #fff;
+      background: #fff;
+      color: #FF1F1F;
       border-radius: 50px;
       font-size: 1.6rem;
       font-weight: 900;
       padding: 1.4rem 3rem;
       margin-bottom: 4rem;
-      box-shadow: 0 10px 30px rgba(255, 31, 31, 0.9);
+      box-shadow: 0 10px 30px rgba(255, 31, 31, 0.2);
       cursor: pointer;
       user-select: none;
       transition: background 0.4s ease, box-shadow 0.4s ease;
@@ -278,40 +281,29 @@
       text-transform: uppercase;
       letter-spacing: 3px;
       animation: pulseGlow 3s infinite;
+      border: 2px solid #FF1F1F;
     }
     .call-to-action:hover {
-      background: #b21414;
-      box-shadow: 0 15px 40px rgba(178, 20, 20, 0.9);
+      background: #ffeaea;
+      box-shadow: 0 15px 40px rgba(255, 31, 31, 0.3);
     }
     @keyframes pulseGlow {
       0%, 100% {
-        box-shadow: 0 0 12px 6px rgba(255,31,31,0.6);
+        box-shadow: 0 0 12px 6px rgba(255,31,31,0.12);
       }
       50% {
-        box-shadow: 0 0 25px 10px rgba(255,31,31,1);
+        box-shadow: 0 0 25px 10px rgba(255,31,31,0.23);
       }
     }
 
-    /* === Rodapé com colunas e ícones === */
+    /* === Rodapé SIMPLIFICADO (modelo anterior) === */
     footer {
       background: #001a40;
-      color: #ddd;
+      color: #fff;
       padding: 2rem 2rem;
       text-align: center;
       font-size: 0.9rem;
       user-select: none;
-    }
-    footer .footer-content {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 2rem;
-    }
-    footer .footer-col {
-      flex: 1 1 200px;
-      min-width: 150px;
     }
     footer h4 {
       color: #FF1F1F;
@@ -319,6 +311,26 @@
       font-weight: 900;
       letter-spacing: 2px;
       text-transform: uppercase;
+    }
+    .footer-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .footer-col {
+      flex: 1 1 200px;
+      min-width: 150px;
+    }
+    .footer-bottom {
+      border-top: 1px solid #552200;
+      text-align: center;
+      padding-top: 15px;
+      font-size: 0.9rem;
+      color: #bb9966;
+      margin-top: 2rem;
     }
     footer ul {
       list-style: none;
@@ -335,18 +347,18 @@
     footer ul li a:hover {
       color: #FF1F1F;
     }
-    footer .social-icons a {
+    .social-icons a {
       color: #ddd;
       font-size: 1.5rem;
       margin-right: 1rem;
       transition: color 0.3s ease;
       display: inline-block;
     }
-    footer .social-icons a:hover {
+    .social-icons a:hover {
       color: #FF1F1F;
     }
 
-    /* === Responsividade geral === */
+    /* Responsividade geral */
     @media (max-width: 900px) {
       .benefits-section {
         flex-direction: column;
@@ -357,10 +369,15 @@
       .delivery-contact {
         flex-direction: column;
       }
+      .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
     }
   </style>
+  <!-- FontAwesome para ícones do rodapé -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 </head>
-
 <body>
 
 <header>
@@ -404,7 +421,7 @@
     <div class="benefits-text">
       <h2>Por que escolher Santo Churros?</h2>
       <p>
-        Em Santo Churros, cada mordida é uma explosão de sabor feita com amor e qualidade. Nossos churros são preparados diariamente, garantindo frescor e textura perfeita. Sinta a crocância que derrete na boca e o recheio cremoso que vai te conquistar.
+        Em Santo Churros, cada mordida é uma explosão de sabor feita com amor e qualidade. Nossos churros são preparados diariamente, garantindo frescor e textura perfeita. Sinta a crocância e o recheio cremoso a cada pedido!
       </p>
       <p>
         Temos orgulho em oferecer sabores exclusivos e combinações que você não encontra em nenhum outro lugar. Perfeito para festas, encontros e aquele momento especial.
